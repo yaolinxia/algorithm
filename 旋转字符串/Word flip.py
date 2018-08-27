@@ -14,4 +14,12 @@
 
 class Solution(object):
     def WordFlip(self, string):
+        s1 = string.split()
+        s1.reverse()
+        print(s1)
+
+if __name__ == "__main__":
+    s = "I am a student."
+    Solution().WordFlip(s)
+
 
