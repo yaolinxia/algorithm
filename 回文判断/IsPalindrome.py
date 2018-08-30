@@ -49,6 +49,7 @@ class Solution(object):
      分析：对于栈的话，只需要将字符串全部压入栈，然后依次将各字符出栈，这样得到的就是原字符串的逆置串，
      分别和原字符串各个字符比较，就可以判断了。 
     """
+    #针对单链表的回文判断
     def case1(self, head):
         if not head and not head.next:
             return True
@@ -71,6 +72,18 @@ class Solution(object):
             slow = slow.next
         return True
 
+    #对于列表是栈的判断， 需要定义出栈的操作，
+    def case2(self, l):
+        length = len(l)
+        subl = []
+        for i in range(length-1, -1, -1):
+            subl.append(l[i])
+        if subl == l:
+            return True
+        else:
+            print("False")
+
+
 
 if __name__ == "__main__":
     s = "abcba"
@@ -83,5 +96,7 @@ if __name__ == "__main__":
     l.next.next.next = ListNode(1)
     print(Solution().case1(l))
 
-
+    print("==========================================================")
+    li = [1, 2, 3, 3, 21, 1]
+    Solution().case2(li)
 
