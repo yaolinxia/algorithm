@@ -79,6 +79,7 @@ class Solution(object):
         for i in range(length-1, -1, -1):
             subl.append(l[i])
         if subl == l:
+            print("True")
             return True
         else:
             print("False")
