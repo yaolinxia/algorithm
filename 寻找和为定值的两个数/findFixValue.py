@@ -18,7 +18,6 @@ class Solution(object):
 
         # for t in l2:
         #     print(t)
-
         # for j in range(len(l2)-1, -1, -1):
         #     print(l2[j])
 
