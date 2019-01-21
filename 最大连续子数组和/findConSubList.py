@@ -33,6 +33,12 @@ def findSub2(l):
         maxSum = max(maxSum, currSum)
     print(maxSum)
 
+def find_max(list):
+    # 先定义一个子数组和的最大值，赋值为整个数列的和
+    max_value = sum(list)
+
+
+
 if __name__ == "__main__":
     l = [1, -2, 3, 10, -4, 7, 2]
     findSub1(l)

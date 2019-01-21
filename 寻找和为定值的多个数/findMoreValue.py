@@ -1,13 +1,11 @@
+<<<<<<< HEAD
 
 class Solution(object):
     """
-    解法一
-    
-    注意到取n，和不取n个区别即可，考虑是否取第n个数的策略，可以转化为一个只和前n-1个数相关的问题。
-    
+    解法一    
+    注意到取n，和不取n个区别即可，考虑是否取第n个数的策略，可以转化为一个只和前n-1个数相关的问题。    
     - 如果取第n个数，那么问题就转化为“取前n-1个数使得它们的和为sum-n”，对应的代码语句就是sumOfkNumber(sum - n, n - 1)；
-    - 如果不取第n个数，那么问题就转化为“取前n-1个数使得他们的和为sum”，对应的代码语句为sumOfkNumber(sum, n - 1)。
-    
+    - 如果不取第n个数，那么问题就转化为“取前n-1个数使得他们的和为sum”，对应的代码语句为sumOfkNumber(sum, n - 1)。    
     """
     def ans1(self, Sum, n):
         l = []
@@ -27,9 +25,38 @@ class Solution(object):
         Solution().ans1(Sum, n-1)
 
 
+=======
+"""
+description：寻找和为定值的多个数
+input：sum, 列表
+output：输出对应的列表
+date：2019/01/17
+"""
+"""
+解法一
+注意到取n，和不取n个区别即可，考虑是否取第n个数的策略，可以转化为一个只和前n-1个数相关的问题。
+- 如果取第n个数，那么问题就转化为“取前n-1个数使得它们的和为sum-n”，对应的代码语句就是sumOfkNumber(sum - n, n - 1)；
+- 如果不取第n个数，那么问题就转化为“取前n-1个数使得他们的和为sum”，对应的代码语句为sumOfkNumber(sum, n - 1)。
+"""
+# 蛮力法
+def ans1(Sum, n):
+    # 存放0-n的数组列表
+    l = []
+    for i in range(0, n + 1):
+        l.append(i)
+    for c in l:
+        sub_l = []
+        temp = Sum - c
+        if temp in l:
+            sub_l.append(c)
+            sub_l.append(temp)
+        if sub_l:
+            print(sub_l)
+    # temp = Sum - i
+    # if temp in
+>>>>>>> 5b10cd391adc877cf23ea0a6b0d59174b08b8906
 
 if __name__ == "__main__":
-    Sum = 5
-    n = 5
-    Solution().ans1(Sum, n)
-
+    Sum = 10
+    n = 10
+    ans1(Sum, n)

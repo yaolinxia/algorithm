@@ -18,7 +18,6 @@ class Solution(object):
 
         # for t in l2:
         #     print(t)
-
         # for j in range(len(l2)-1, -1, -1):
         #     print(l2[j])
 
@@ -69,7 +68,33 @@ class Solution(object):
                 temp.append(li[tail])
                 break
         print(temp)
+
+    # time: 2019_0116
+    # 存在问题：复杂度高于O(n),为O(n^2)
+    def findFixV4(self, li, Sum):
+        for i in li:
+            if Sum-i in li:
+                print(li.index(Sum-i))
+
+    # time: 2019_0116
+    # 使用额外的空间存储差值
+    def findFixV5(self, li, Sum):
+        sub_list = []
+        for i in li:
+            sub_list.append(Sum-i)
+        print(sub_list)
+        head = 0
+        tail = len(li) - 1
+        while head < len(li) & tail >= 0:
+            if li[head] == sub_list[tail]:
+                # print(li[head], sub_list[tail])
+                print("------------")
+            else:
+
+                head += 1
+                tail -= 1
+
 if __name__ == "__main__":
     li = [15, 1, 2, 4, 7, 11]
     value = 15
-    Solution().findFixV3(li, value)
+    Solution().findFixV5(li, value)
