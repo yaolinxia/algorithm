@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class Solution(object):
     """
@@ -26,6 +27,8 @@ class Solution(object):
 
 
 =======
+=======
+>>>>>>> 5b10cd391adc877cf23ea0a6b0d59174b08b8906
 """
 description：寻找和为定值的多个数
 input：sum, 列表
@@ -54,6 +57,9 @@ def ans1(Sum, n):
             print(sub_l)
     # temp = Sum - i
     # if temp in
+<<<<<<< HEAD
+>>>>>>> 5b10cd391adc877cf23ea0a6b0d59174b08b8906
+=======
 >>>>>>> 5b10cd391adc877cf23ea0a6b0d59174b08b8906
 
 if __name__ == "__main__":
