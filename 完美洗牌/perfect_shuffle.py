@@ -21,16 +21,18 @@ def shuffle1(l):
 
 # 思路2：使用perfectshufle的方法
 def shuffle2(l):
-    mid = int(len(l) / 2)
-    # b = l[4:len(l)]
-    # print(b)
-    b = []
-    # print(mid)
-    for i in range(0, len(l)):
-        b[((i+1)*2) % (len(l)+1)-1] = l[i]
-    print(l)
-    for i in range(0, len(l)+1):
-        l[i] = b[i]
+    # step1: 设置一个额外的空间，存放[b1, b2, b3, b4]
+    l_b = l[4:len(l)]
+    # step2: 算出列表长度一半的大小
+    mid = int(len(l)/2)
+    print(mid)
+    # step3: 再定义一个空列表，存放最终的结果
+    l_last = ['0']*len(l)
+    for i in range(1, mid+1):
+        l_last[(2*i) % (2*mid+1) - 1] = l[i-1]
+    for i in range(0, mid):
+        l_last[(2*i)] = l_b[i]
+    print(l_last)
 
 
 if __name__ == '__main__':
