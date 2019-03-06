@@ -44,6 +44,7 @@ def dutch_flag2(flags):
 
 if __name__ == '__main__':
     flags = [1, 2, 0, 0, 0, 2, 1, 1, 0, 2, 2, 1, 0]
-    dutch_flag2(flags)
+    flags2 = [1, 0, 2]
+    dutch_flag2(flags2)
 
 
