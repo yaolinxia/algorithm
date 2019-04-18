@@ -84,20 +84,33 @@ class Solution(object):
         else:
             print("False")
 
+    def is_p(self, s):
+        head = 0
+        tail = len(s)-1
+        while head < tail:
+            if s[head] == s[tail]:
+                head += 1
+                tail -= 1
+            else:
+                print('False')
+                break
+        if head >= tail:
+            print("True")
 
 
 if __name__ == "__main__":
-    s = "abcba"
-    print(Solution().isPalindrome(s))
-    print(Solution().isPalindrome2(s))
-
-    l = ListNode(1)
-    l.next = ListNode(2)
-    l.next.next = ListNode(1)
-    l.next.next.next = ListNode(1)
-    print(Solution().case1(l))
-
-    print("==========================================================")
-    li = [1, 2, 3, 3, 21, 1]
-    Solution().case2(li)
+    s = "abcdba"
+    Solution().is_p(s)
+    # print(Solution().isPalindrome(s))
+    # print(Solution().isPalindrome2(s))
+    #
+    # l = ListNode(1)
+    # l.next = ListNode(2)
+    # l.next.next = ListNode(1)
+    # l.next.next.next = ListNode(1)
+    # print(Solution().case1(l))
+    #
+    # print("==========================================================")
+    # li = [1, 2, 3, 3, 21, 1]
+    # Solution().case2(li)
 
