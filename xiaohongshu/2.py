@@ -4,43 +4,30 @@ def paiban(num, string):
     l_s = string.strip().split(" ")
     len_s = len(string)
     len_ls = len(l_s)
-    print(l_s)
-    print(len_s)
+    # print(l_s)
+    # print(len_s)
     line_num = (len_s+2)//num+1
-    print(line_num)
+    # print(line_num)
     i = 0
-    total = []
+    total = [""]*line_num
+    total[0] = "  "
     for s in l_s:
-        if i == 0:
-            sen0="  "
-            if len(sen0)<num:
-                sen0 = sen0 + s + ' '
-            else:
-                sen0 = sen0[:-1]
-                total.append(sen0)
-                i +=1
-        elif i < line_num-1:
-            sen0 = ''
-            if len(sen0) <num:
-                sen0 = sen0 + s + ' '
-                print(sen0)
-            else:
-                sen0 = sen0[:-1]
-                total.append(sen0)
-                i+=1
-        elif i == line_num-1:
-            sen0 = ''
-            if len(sen0) < num:
-                sen0 = sen0 + s + ' '
-            else:
-                sen0 = sen0[:-1]
-                total.append(sen0+'\n')
-                i += 1
-    print(total)
-    return total
-    print("  I have a")
-    print("dream Martin")
-    print("Luther King")
+        if len(total[i]+s)<num:
+            total[i] = total[i] + s + ' '
+        else:
+            # total[i] = total[i][:-1]
+            i += 1
+            total[i] = total[i] + s + ' '
+        # print(total)
+    for i in range(line_num):
+        if i == line_num-1:
+            print(total[i][:-1]+'\n')
+        else:
+            print(total[i][:-1])
+
+
+
+
 
 def s(input, limit):
     localStr = ''
