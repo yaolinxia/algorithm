@@ -25,10 +25,6 @@ def paiban(num, string):
         else:
             print(total[i][:-1])
 
-
-
-
-
 def s(input, limit):
     localStr = ''
     lines = []
