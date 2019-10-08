@@ -29,9 +29,10 @@ class Solution(object):
     #2.O(N)解法，参考https://www.felix021.com/blog/read.php?2040
     #https://segmentfault.com/a/1190000003914228
 
-    def LongSubPali1(self, string):
-        #没有看懂
-        print("mancher")
+    # def LongSubPali1(self, string):
+    #     #没有看懂
+    #     print("mancher")
+
 if __name__ == "__main__":
     s = "aayaa1"
     Solution().LongSubPali1(s)
