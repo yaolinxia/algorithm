@@ -11,12 +11,17 @@
 #
 # p = Person()
 
-def testE(p):
-    if p<1:
-        raise(Exception,"err")
-try:
-    testE(0)
-except(Exception, err):
-    print(1,err)
+# def testE(p):
+#     if p<1:
+#         raise(Exception,"err")
+# try:
+#     testE(0)
+# except(Exception, err):
+#     print(1,err)
+
+a = [1, 2 , 3, 4]
+a.sort(key=lambda a:len(str(a)), reverse=True)
+print(a)
+
 
 
