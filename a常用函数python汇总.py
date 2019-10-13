@@ -19,6 +19,8 @@ def sorted_dict(d={"a":3, "f":5, "b":6}):
     s_d = sorted(d, key=lambda i:d[i])
     print(s_d)
 
+
+
 if __name__ == '__main__':
     # str2list()
     sorted_dict()

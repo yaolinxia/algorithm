@@ -36,7 +36,21 @@ class Solution(object):
         #print(kmax)
         return index
 
+def find_kmax(l, k):
+    # 维护一个大小为k的数组
+    temp = []
+    for i in range(k):
+        temp.append(l[i])
+    l_max = max(temp)
+    print(l_max)
+    # 从剩余的列表中进一步进行
+
+
+
+
+
 if __name__ == "__main__":
     l = [2, 1, 4, 5, 4, 3, 2, 1, 4, 0, 6, 5, 4, 9, 23]
-    Solution().FindKMin(l, 4)
-    print(Solution().findMax(l))
+    # Solution().FindKMin(l, 4)
+    # print(Solution().findMax(l))
+    find_kmax(l, 4)

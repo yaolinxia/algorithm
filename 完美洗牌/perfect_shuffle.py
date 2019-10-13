@@ -37,5 +37,5 @@ def shuffle2(l):
 
 if __name__ == '__main__':
     l = ['a1', 'a2', 'a3', 'a4', 'b1', 'b2', 'b3', 'b4']
-    shuffle2(l)
+    shuffle1(l)
 

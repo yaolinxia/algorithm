@@ -30,5 +30,4 @@ if __name__ == '__main__':
     for i in range(N):
         n = int(sys.stdin.readline().strip())
         line = sys.stdin.readline().strip()
-
     d()
