@@ -25,3 +25,6 @@ def num_split(N):
 if __name__ == '__main__':
     N = 19
     num_split(N)
+
+
+
