@@ -19,8 +19,13 @@ def sorted_dict(d={"a":3, "f":5, "b":6}):
     s_d = sorted(d, key=lambda i:d[i])
     print(s_d)
 
-
+def test():
+    from functools import reduce
+    def fn(m,n):
+        return m*10+n
+    print(reduce(fn, [8,9,5,6,3,2]))
 
 if __name__ == '__main__':
     # str2list()
-    sorted_dict()
+    # sorted_dict()
+    test()
