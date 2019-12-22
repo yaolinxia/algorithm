@@ -17,7 +17,6 @@ def minInt(num):
     d = {}
     for i in range(0, 10):
         d[i] = 0
-
     for e in num_list:
         d[int(e)] += 1
     l = []

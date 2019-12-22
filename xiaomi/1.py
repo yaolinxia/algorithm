@@ -1,32 +1,38 @@
-# class So
-# def maxP(pri):
-#     cand = []
-#     max_p = 0
-#     if len(pri) <= 1:
-#         return max_p
-#     for i in range(len(pri)):
-#         l =
+nums = list("0123456789")
+letters = list("abcdefghijklmnopqrstuvwxyz")
+letters_up = []
+for l in letters:
+    letters_up.append(l.upper())
+legal_str = nums+letters+letters_up
 
-
-class Solution(object):
-    def max_p(self, money):
-        if not money:
-            return 0
-        len_p = len(money)
-        dp = [[0]*len_p for _ in range(3)]
-        for k in range(1, 3):
-            p_max = -money[0]
-            for i in range(1, len_p):
-                p_max = max(p_max, dp[k-1][i-1]-money[i])
-                dp[k][i] = max(dp[k][i-1], money[i]+p_max)
-        return dp[-1][-1]
+def str_legal(str_list):
+    hefa = []
+    buhefa = []
+    print(str_list)
+    for s in str_list:
+        c_len = len(s)
+        leg_str = ""
+        for c in s:
+            length_feifa = 0 # 非法字符长度
+            length_hefa = 0 # 合法字符长度
+            if c in legal_str:
+                length_hefa += 1
+                leg_str += c
+            else:
+                length_feifa += 1
+            if length_feifa == c_len:
+                buhefa.append(s)
+            else:
+                hefa.append(leg_str)
+    print(hefa)
+    print(buhefa)
 
 import sys
 if __name__ == '__main__':
-    line = sys.stdin.readline().strip()
-    # 把每一行的数字分隔后转化成int列表
-    mon = list(map(int, line.split()))
-
-    print(Solution().max_p(mon))
+    # str = input()
+    # str_list = str.strip().split()
+    str_list = ['aaaa', 'bbbb', 'sss', 's--=', '===', '--']
+    str_legal(str_list)
+    # print(str_legal(str_list))
 
 

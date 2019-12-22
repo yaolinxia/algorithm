@@ -18,6 +18,7 @@ def str2list(s="[2,3,4,1]"):
 def sorted_dict(d={"a":3, "f":5, "b":6}):
     s_d = sorted(d, key=lambda i:d[i])
     print(s_d)
+
 # 按照字符串的第一个字母进行对整个字符串对排序
 def sorted_s(l=["delphi" ,"Delphi" ,"python" ,"Python" ,"c++" ,"C++" ,"c" ,"C" ,"golang" ,"Golang"]):
     l.sort(key=lambda s: s[0])
@@ -30,7 +31,14 @@ def test():
     print(reduce(fn, [8,9,5,6,3,2]))
 
 
+def match_str(source="我是中国人", word="中国人"):
+    print(source.find(word))
+    # if source.find(word):
+    #     print(source.replace("中国人", "zhongguoren"))
+
+
 if __name__ == '__main__':
     # str2list()
     # sorted_dict()
-    test()
+    # test()
+    match_str()

@@ -44,6 +44,8 @@ def sort_str1(l):
         print(l[i][0])
     l.sort(key=lambda s:s[0])
     print(l)
+
+
 """
 waimai,dache,lvyou,liren,meishi,jiehun,lvyoujingdian,jiaopei,menpiao,jiudian
 """
@@ -67,8 +69,7 @@ if __name__ == '__main__':
     # l.sort(reverse=True)
     # sorted(l,reverse=True)
     # print(l)
-    """
-    
+    """  
     pre = 0
     next = 1
     while next< len(l):
